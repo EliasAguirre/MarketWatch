@@ -1,0 +1,306 @@
+/*
+CSS for the user and admin page
+*/
+.tabset > input[type="radio"] {
+position: absolute;
+left: -200vw;
+}
+
+.tabset .tab-panel {
+display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+display: block;
+}
+
+body {
+font: 18px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+color: #333;
+font-weight: 300;
+padding: 30px;
+}
+.tabset > label {
+position: relative;
+display: inline-block;
+padding: 15px 15px 25px;
+border: 1px solid transparent;
+border-bottom: 0;
+cursor: pointer;
+font-weight: 600;
+}
+
+.tabset > label::after {
+content: "";
+position: absolute;
+left: 15px;
+bottom: 10px;
+width: 22px;
+height: 4px;
+background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+background: #06c;
+}
+
+.tabset > input:checked + label {
+border-color: #ccc;
+border-bottom: 1px solid #fff;
+margin-bottom: -1px;
+}
+
+.tab-panel {
+padding: 30px 0;
+border-top: 1px solid #ccc;
+}
+.test {
+padding: 0 30px;
+font-size: 20px;
+}
+.test2 {
+padding-bottom: 30px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+button {
+font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+	color: #333;
+	font-weight: 300;
+	font-size: 20px;
+	background-color: #306BFF;
+	color: white;
+	padding: 8px 5px;
+	margin: 4px 0;
+	border: none;
+	cursor: pointer;
+	width: 80%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+table{
+width:100%;
+table-layout: fixed;
+}
+.tbl-header{
+background-color: rgba(255,255,255,0.3);
+}
+.tbl-content{
+height:500px;
+overflow-x:auto;
+margin-top: 0px;
+border: 1px solid rgba(255,255,255,0.3);
+}
+.tbl-content-short{
+height:300px;
+overflow-x:auto;
+margin-top: 0px;
+border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+color: #333;
+font-weight: 300;
+padding: 20px 15px;
+text-align: left;
+font-weight: 500;
+font-size: 15px;
+color: #000;
+text-transform: uppercase;
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+td{
+font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+padding: 15px;
+padding-right: 5px;
+text-align: left;
+vertical-align:middle;
+font-weight: 300;
+font-size: 12px;
+color: #000;
+border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+.td-2{
+font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+padding: 2px;
+text-align: left;
+vertical-align:middle;
+font-weight: 300;
+font-size: 12px;
+color: #000;
+border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+.test3{
+margin: 50px;
+}
+.test4{
+margin-top: -5px;
+}
+.test5{
+margin: 50px;
+margin-top: -5px;
+}
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+	width: 9px;
+}
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+img.avatar {
+	width: 20%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+/* Template followed from W3 Schools */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)}
+	to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		 display: block;
+		 float: none;
+	}
+	.cancelbtn {
+		 width: 100%;
+	}
+}
+.test6{
+font-size: 20px;
+background-color: #306BFF;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+.test8{
+	margin-top: -10px;
+}
+.inline {
+ display:inline-block;
+ margin-right:5px;
+}
+.test9{
+	margin-left: -150px;
+	width: 150px;
+}
+.test10 {
+	width:100px;
+	height:47px;
+}
+.test11 {
+	padding-left: 5px;
+}
+.test12 {
+	display: inline-block;
+	padding-left:30px;
+	padding-right:30px;
+	margin-left: -70px;
+}
+.test13 {
+	display: inline-block;
+	padding-left:40px;
+	padding-right:40px;
+	margin-left: -50px;
+}
+.test15 {
+	margin-left: -27px;
+}
+.test16{
+margin-left: 5px;
+}
+.test2 {
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
