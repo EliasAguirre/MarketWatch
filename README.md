@@ -1,5 +1,8 @@
 # Stock Market Management
 
+## Project Background
+Worked with a team to create a portfolio managing platform. We created the database tables as well as normalized all of them for our SQL Database. 
+
 ## Configuring your environment
 Start local apache server
 `sudo apachectl start`
